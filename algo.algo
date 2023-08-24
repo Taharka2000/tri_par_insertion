@@ -1,0 +1,16 @@
+ALGORITHM tri_par_insertion
+VAR
+    arr : ARRAY_OF_INTERGER [n];
+    i,j:INTEGER
+    position_acc:INTEGER
+BEGIN
+    FOR i FROM 0 TO arr.length-1 STEP 1  DO
+        positon_acc=arr[i]
+        j=i-1
+        WHILE (j>=0 && arr[j]>position_acc) DO
+            arr[j+1]=arr[j]
+            j--
+        END_WHILE
+        arr[j+1]=position_acc
+    END_FOR
+END
